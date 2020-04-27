@@ -1,0 +1,12 @@
+C:\Users\WYP\source\repos\RabbitMQExample\MyRabbitMQ\DataProvider\bin\Debug\netcoreapp3.1\DataProvider.deps.json
+C:\Users\WYP\source\repos\RabbitMQExample\MyRabbitMQ\DataProvider\bin\Debug\netcoreapp3.1\DataProvider.dll
+C:\Users\WYP\source\repos\RabbitMQExample\MyRabbitMQ\DataProvider\obj\Debug\netcoreapp3.1\DataProvider.AssemblyInfoInputs.cache
+C:\Users\WYP\source\repos\RabbitMQExample\MyRabbitMQ\DataProvider\obj\Debug\netcoreapp3.1\DataProvider.AssemblyInfo.cs
+C:\Users\WYP\source\repos\RabbitMQExample\MyRabbitMQ\DataProvider\obj\Debug\netcoreapp3.1\DataProvider.csprojAssemblyReference.cache
+C:\Users\WYP\source\repos\RabbitMQExample\MyRabbitMQ\DataProvider\bin\Debug\netcoreapp3.1\DataProvider.runtimeconfig.json
+C:\Users\WYP\source\repos\RabbitMQExample\MyRabbitMQ\DataProvider\bin\Debug\netcoreapp3.1\DataProvider.runtimeconfig.dev.json
+C:\Users\WYP\source\repos\RabbitMQExample\MyRabbitMQ\DataProvider\obj\Debug\netcoreapp3.1\DataProvider.genruntimeconfig.cache
+C:\Users\WYP\source\repos\RabbitMQExample\MyRabbitMQ\DataProvider\bin\Debug\netcoreapp3.1\DataProvider.pdb
+C:\Users\WYP\source\repos\RabbitMQExample\MyRabbitMQ\DataProvider\obj\Debug\netcoreapp3.1\DataProvider.csproj.CoreCompileInputs.cache
+C:\Users\WYP\source\repos\RabbitMQExample\MyRabbitMQ\DataProvider\obj\Debug\netcoreapp3.1\DataProvider.dll
+C:\Users\WYP\source\repos\RabbitMQExample\MyRabbitMQ\DataProvider\obj\Debug\netcoreapp3.1\DataProvider.pdb

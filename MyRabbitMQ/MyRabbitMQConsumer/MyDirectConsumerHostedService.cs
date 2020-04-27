@@ -44,14 +44,13 @@ namespace MyRabbitMQConsumer
 
                 _conn = connectionFactory.CreateConnection();
 
-                _chanel = _conn.CreateModel();
-                
                 string exchangeName = "myDirectExchange";
                 string routeKey = "test";
 
+                _chanel = _conn.CreateModel();
                 // 事件基本消费者
                 var consumer = new EventingBasicConsumer(_chanel);
-
+                
                 consumer.Received += (ch, args) =>
                 {
                     var msg = Encoding.UTF8.GetString(args.Body);
