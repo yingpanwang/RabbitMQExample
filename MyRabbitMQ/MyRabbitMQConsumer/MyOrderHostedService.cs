@@ -17,6 +17,7 @@ namespace MyRabbitMQConsumer
 {
     public class MyOrderHostedService : IHostedService
     {
+        private static int ErrorCount = 0;
         private IConnection _conn;
         private IModel _chanel;
         private IDatabase _redisDb;
@@ -72,6 +73,7 @@ namespace MyRabbitMQConsumer
                     {
                         bool createOrderSuccessed = await _orderService.CreateOrderAsync(order);
                         bool reduceSaleSuccessed = await _saleService.ReduceSaleAsync(order.SId.Value);
+                        // 正常这里应该用事务，这里为了方便只取了简单结果
                         if (createOrderSuccessed && reduceSaleSuccessed)
                         {
                             long redisStock = _redisDb.StringDecrement($"{SalePrefix}{order.PId}");
@@ -80,7 +82,7 @@ namespace MyRabbitMQConsumer
                         else
                         {
                             var sale = await _saleService.GetSale(order.SId.Value);
-                            if (!sale.IsFinished)
+                            if (sale == null || !sale.IsFinished )
                             {
                                 long redisStock = _redisDb.StringIncrement($"{SalePrefix}{order.PId}");
                                 Console.WriteLine("创建订单失败\n");
@@ -91,7 +93,8 @@ namespace MyRabbitMQConsumer
                     }
                     else
                     {
-                        
+                        ErrorCount++;
+                        Console.WriteLine("错误次数:"+ErrorCount);
                     }
                 }
                 

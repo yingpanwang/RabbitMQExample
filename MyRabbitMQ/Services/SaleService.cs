@@ -28,6 +28,9 @@ namespace Services
         public async ValueTask<bool> ReduceSaleAsync(int sId)
         {
             var sale = await _dbContext.Sales.FirstOrDefaultAsync(x=>x.Id == sId);
+            if (sale == null)
+                return false;
+                    
             if (sale.SaleCount > 0)
             {
                 sale.SaleCount--;
